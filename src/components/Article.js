@@ -1,12 +1,12 @@
 import React from "react";
 
-function Article(props) {
-  const defaultDate = "January 1,1970";
+function Article({ title, date, preview }) {
+  const itemDate = date || "January 1, 1970";
   return (
     <article>
-      <h3>{props.title}</h3>
-      {!props.date ? <small>{defaultDate}</small> : <small>{props.date}</small>}
-      <p>{props.preview}</p>
+      <h3>{title}</h3>
+      <small>{itemDate}</small>
+      <p>{preview}</p>
     </article>
   );
 }
